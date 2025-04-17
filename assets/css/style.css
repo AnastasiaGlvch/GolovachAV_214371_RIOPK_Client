@@ -1,4 +1,4 @@
-/* Новые стили для современного интерфейса в стиле ClassBox */
+
 :root {
   --primary: #7868e6;
   --primary-light: #9d93f1;
@@ -505,7 +505,6 @@ header {
   color: var(--danger);
 }
 
-/* Добавляем стили для классов high/medium/low-reliability */
 .high-reliability .rating-score {
   color: var(--success);
 }
@@ -518,7 +517,7 @@ header {
   color: var(--danger);
 }
 
-/* Добавляем цветную обводку для круга рейтинга */
+
 .high-reliability {
   border: 3px solid var(--success);
 }

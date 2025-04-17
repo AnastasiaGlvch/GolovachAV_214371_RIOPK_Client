@@ -261,7 +261,7 @@ $(document).ready(function() {
         $('#error-message').addClass('d-none');
     });
     
-    // Обработчик кнопок "Обновить" для источников данных
+   
     $('.retry-button').on('click', function() {
         // Повторяем проверку с текущим УНП
         const unp = $('#unp').val().trim();
@@ -271,7 +271,7 @@ $(document).ready(function() {
         }
     });
     
-    // Обработчик кнопки "Экспорт в PDF"
+  
     $('#export-pdf-button').on('click', function() {
         const user = getCurrentUser();
         
@@ -279,15 +279,14 @@ $(document).ready(function() {
             showMessage('error', 'Для экспорта необходимо войти в систему с правами администратора или аналитика');
             return;
         }
-        
-        // Получаем УНП из текущей проверки
+      
         const unp = $('#company-unp').text();
         if (!unp || unp === 'Нет данных') {
             showMessage('error', 'Необходимо сначала выполнить проверку контрагента');
             return;
         }
         
-        // Показываем индикатор загрузки
+       
         $('#loading').removeClass('d-none');
         
         // Отправляем запрос на экспорт
@@ -298,7 +297,7 @@ $(document).ready(function() {
             headers: { 'Authorization': 'Bearer ' + getToken() },
             data: JSON.stringify({ unp: unp }),
             success: function(response) {
-                // Скрываем индикатор загрузки
+               
                 $('#loading').addClass('d-none');
                 
                 if (response.status === 'success') {
