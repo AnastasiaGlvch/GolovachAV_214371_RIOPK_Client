@@ -165,10 +165,7 @@
                     <button class="btn btn-success rounded-pill shadow-sm me-2" id="export-pdf-button">
                         <i class="fas fa-file-pdf me-2"></i> Экспорт в PDF
                     </button>
-                    <!-- Кнопка экспорта в Excel отключена из-за проблем с функциональностью -->
-                    <!-- <button class="btn btn-primary rounded-pill shadow-sm" id="export-excel-button">
-                        <i class="fas fa-file-excel me-2"></i> Экспорт в Excel
-                    </button> -->
+                   ы
                 </div>
             </div>
         </div>
@@ -225,7 +222,7 @@ $(document).ready(function() {
                 // Отображаем данные
                 displayResults(response.data);
                 
-                // Показываем блок с результатами
+               
                 $('#result-container').removeClass('d-none');
                 
                 // Если статус partial, показываем предупреждение
@@ -489,13 +486,13 @@ $(document).ready(function() {
                 tableBody.append(row);
             });
             
-            // Показываем карточку с информацией о ликвидации
+       
             $('#liquidation-info-card').removeClass('d-none');
         } else {
-            // Если нет информации о ликвидации
+        
             $('#liquidation-info-container').html('<p class="text-muted">Информация о ликвидации отсутствует.</p>');
             
-            // Показываем карточку, чтобы пользователь видел, что проверка была выполнена
+           
             $('#liquidation-info-card').removeClass('d-none');
         }
     }
